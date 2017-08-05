@@ -8,7 +8,7 @@ const app = express();
 
 app.disable("x-powered-by");
 
-app.use('/', express.static(path.join(__dirname, '../client')));
+app.use('/', express.static(path.join(__dirname, '../client/')));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 
@@ -17,7 +17,7 @@ app.use(urlencoded({ extended: false }));
 
 if (app.get("env") === "production") {
   // in production mode run application from dist folder
-  app.use(express.static(path.join(__dirname, "../client")));
+  app.use(express.static(path.join(__dirname, "/../client/")));
 
 }
 

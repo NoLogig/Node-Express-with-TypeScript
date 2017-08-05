@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /* Shebang (UNIX) line */
 
 import * as http from "http";
@@ -16,12 +17,16 @@ server.on("error", onError);
 server.on("listening", onListening);
 
 function normalizePort(val): boolean | number {
-     const normalizePort = parseInt(val,10);
+  const normalizePort = parseInt(val, 10);
 
-     if(isNaN(normalizePort)) {
-         return normalizePort;
-     }
-    return false;
+  if (isNaN(normalizePort)) {
+    return normalizePort;
+  }
+  if (normalizePort >= 0) {
+    // port number
+    return normalizePort;
+  }
+  return false;
 }
 function onError(error) {
   if (error.syscall !== "listen") {
