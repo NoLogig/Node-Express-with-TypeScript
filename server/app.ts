@@ -20,6 +20,13 @@ if (app.get("env") === "production") {
   app.use(express.static(path.join(__dirname, "/../client/")));
 
 }
+// if (app.get("env") === "development") {
+
+//   app.get('/*', function (req, res) {
+//     res.sendFile(path.join(__dirname, '../client/index.html'));
+//   });
+
+// }
 
 // catch 404 and forward to error handler
 app.use((req: express.Request, res: express.Response, next) => {

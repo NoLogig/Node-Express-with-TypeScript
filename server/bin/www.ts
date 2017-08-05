@@ -20,7 +20,7 @@ function normalizePort(val): boolean | number {
   const normalizePort = parseInt(val, 10);
 
   if (isNaN(normalizePort)) {
-    return normalizePort;
+    return val;
   }
   if (normalizePort >= 0) {
     // port number
@@ -57,4 +57,3 @@ function onListening() {
     ? "pipe " + addr
     : "port " + addr.port;
 }
-
