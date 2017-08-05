@@ -1,0 +1,24 @@
+{
+  "name": "Inspiration Station",
+  "description": "Blog-app using MEAN stack",
+  "keywords": [
+    "MEAN",
+    "Node",
+    "Angular",
+    "Express",
+    "MongoDB",
+    "mLab",
+    "TypeScript"
+  ],
+  "repository": "https://github.com/NoLogig/Inspiration-Station",
+  "success_url": "/",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "addons": [
+    "mongolab"
+  ]
+}
