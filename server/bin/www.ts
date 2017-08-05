@@ -1,13 +1,18 @@
 #!/usr/bin/env node
+<<<<<<< HEAD
 
 /**
  * Module dependencies.
  */
+=======
+/* Shebang (UNIX) line */
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
 
 import * as http from "http";
 import { app } from "../app";
 import { serverPort } from "../config";
 
+<<<<<<< HEAD
 /**
  * Get port from environment and store in Express.
  */
@@ -23,10 +28,19 @@ const server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
+=======
+
+const port = normalizePort(process.env.PORT || serverPort);
+app.set("port", port);
+
+const server = http.createServer(app);
+
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
 server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);
 
+<<<<<<< HEAD
 /**
  * Normalize a port into a number, string, or false.
  */
@@ -52,6 +66,16 @@ function normalizePort(val): boolean | number {
  * Event listener for HTTP server 'error' event.
  */
 
+=======
+function normalizePort(val): boolean | number {
+     const normalizePort = parseInt(val,10);
+
+     if(isNaN(normalizePort)) {
+         return normalizePort;
+     }
+    return false;
+}
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
 function onError(error) {
   if (error.syscall !== "listen") {
     throw error;
@@ -75,14 +99,21 @@ function onError(error) {
       throw error;
   }
 }
+<<<<<<< HEAD
 
 /**
  * Event listener for HTTP server 'listening' event.
  */
 
+=======
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
 function onListening() {
   const addr = server.address();
   const bind = typeof addr === "string"
     ? "pipe " + addr
     : "port " + addr.port;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6

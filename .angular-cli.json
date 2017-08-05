@@ -1,7 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
+<<<<<<< HEAD
     "name": "inspiration-station"
+=======
+    "name": "mean-skeletton"
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
   },
   "apps": [
     {

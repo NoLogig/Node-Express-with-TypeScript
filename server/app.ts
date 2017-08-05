@@ -2,7 +2,11 @@ import { json, urlencoded } from "body-parser";
 import * as express from "express";
 import * as path from "path";
 
+<<<<<<< HEAD
 import { userRouter } from "./routes/user";
+=======
+// import { userRouter } from "./routes/user";
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
 
 const app = express();
 
@@ -13,13 +17,18 @@ app.use(json());
 app.use(urlencoded({ extended: false }));
 
 // api routes
+<<<<<<< HEAD
 app.use("/api/user", userRouter);
+=======
+// app.use("/api/user", userRouter);
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
 
 if (app.get("env") === "production") {
   // in production mode run application from dist folder
   app.use(express.static(path.join(__dirname, "../client")));
 
 }
+<<<<<<< HEAD
 // if (app.get("env") === "development") {
 
 //   app.get('/*', function (req, res) {
@@ -27,6 +36,8 @@ if (app.get("env") === "production") {
 //   });
 
 // }
+=======
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
 
 // catch 404 and forward to error handler
 app.use((req: express.Request, res: express.Response, next) => {
@@ -41,7 +52,12 @@ app.use((err: any, req: express.Request, res: express.Response, next: express.Ne
   res.status(err.status || 500);
   res.json({
     error: {},
+<<<<<<< HEAD
     message: err.message,
+=======
+    code: err.status,
+    message: err.message
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
   });
 });
 

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # InspirationStation
+=======
+# MeanSkeletton
+>>>>>>> 2d2b6a60e45e7426806d46cecac5110121f796d6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
 
