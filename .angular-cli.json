@@ -1,12 +1,20 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
+<<<<<<< HEAD
     "name": "inspiration-station"
+=======
+    "name": "angular2-express-starter"
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
   },
   "apps": [
     {
       "root": "src",
+<<<<<<< HEAD
       "outDir": "dist/client",
+=======
+      "outDir": "dist",
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
       "assets": [
         "assets",
         "favicon.ico"
@@ -19,6 +27,10 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+<<<<<<< HEAD
+=======
+        "../node_modules/normalize.css/normalize.css",
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
         "styles.css"
       ],
       "scripts": [],
@@ -36,6 +48,7 @@
   },
   "lint": [
     {
+<<<<<<< HEAD
       "project": "src/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
@@ -46,6 +59,15 @@
     {
       "project": "e2e/tsconfig.e2e.json",
       "exclude": "**/node_modules/**"
+=======
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
     }
   ],
   "test": {

@@ -11,7 +11,11 @@
     "dist/server"
   ],
   "env": {
+<<<<<<< HEAD
     "NODE_ENV": "production"
+=======
+    "NODE_ENV": "development"
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
   },
   "ext": "js json"
 }

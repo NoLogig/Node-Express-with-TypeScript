@@ -1,8 +1,25 @@
 {
+<<<<<<< HEAD
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../dist/server",
     "mapRoot": "../dist/server",
     "module": "commonjs"
+=======
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
+    "mapRoot": "../dist/server",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "../dist/server",
+    "sourceMap": true,
+    "target": "es6",
+    "typeRoots": [
+      "../node_modules/@types"
+    ]
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
   }
 }

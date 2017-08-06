@@ -1,6 +1,10 @@
 # InspirationStation
 
+<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
+=======
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
 
 ## Development server
 
@@ -8,7 +12,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
+<<<<<<< HEAD
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+=======
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
 
 ## Build
 

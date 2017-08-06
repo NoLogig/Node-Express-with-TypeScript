@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+<<<<<<< HEAD
 /out-tsc
 
 # dependencies
@@ -23,21 +24,46 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+=======
+
+# dependencies
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.idea
+/.vscode
+.project
+.classpath
+*.launch
+.settings/
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
 
 # misc
 /.sass-cache
 /connect.lock
+<<<<<<< HEAD
 /coverage
+=======
+/coverage/*
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
 /libpeerconnection.log
 npm-debug.log
 testem.log
 /typings
+<<<<<<< HEAD
 yarn-error.log
+=======
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
 
 # e2e
 /e2e/*.js
 /e2e/*.map
 
+<<<<<<< HEAD
 # System Files
+=======
+#System Files
+>>>>>>> 3ee57cea1c0778c3534aa3feacddba2def4d8e3f
 .DS_Store
 Thumbs.db
