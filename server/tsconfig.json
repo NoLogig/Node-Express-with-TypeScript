@@ -3,6 +3,9 @@
   "compilerOptions": {
     "outDir": "../dist/server",
     "mapRoot": "../dist/server",
-    "module": "commonjs"
+    "module": "commonjs",
+    "target": "es6"
   }
+
+
 }

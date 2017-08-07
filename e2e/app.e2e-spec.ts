@@ -1,4 +1,3 @@
-
 import { InspirationStationPage } from './app.po';
 
 describe('inspiration-station App', () => {

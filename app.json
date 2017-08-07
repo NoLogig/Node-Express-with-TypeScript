@@ -4,11 +4,11 @@
   "keywords": [
     "MEAN",
     "Node",
-    "Angular",
+    "Angular 4",
     "Express",
     "MongoDB",
-    "mLab",
-    "TypeScript"
+    "TypeScript",
+    "Angular Material"
   ],
   "repository": "https://github.com/NoLogig/Inspiration-Station",
   "success_url": "/",

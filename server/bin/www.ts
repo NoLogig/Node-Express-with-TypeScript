@@ -1,33 +1,54 @@
 #!/usr/bin/env node
 
-/* Shebang (UNIX) line */
+/**
+ * Module dependencies.
+ */
 
 import * as http from "http";
 import { app } from "../app";
 import { serverPort } from "../config";
-
-
+/**
+ * Get port from environment and store in Express.
+ */
 const port = normalizePort(process.env.PORT || serverPort);
 app.set("port", port);
 
+/**
+ * Create HTTP server.*/
 const server = http.createServer(app);
 
+
+/**
+ *  listen on provided ports */
 server.listen(port);
+
+/**
+ * add error handler */
 server.on("error", onError);
+
+/**
+ * start listening on port */
 server.on("listening", onListening);
 
+/**
+ * Normalize a port into a number, string, or false.
+ */
 function normalizePort(val): boolean | number {
-  const normalizePort = parseInt(val, 10);
 
-  if (isNaN(normalizePort)) {
+  const normalizedPort = parseInt(val, 10);
+
+  if (isNaN(normalizedPort)) {
+    // named pipe
     return val;
   }
-  if (normalizePort >= 0) {
+
+  if (normalizedPort >= 0) {
     // port number
-    return normalizePort;
+    return normalizedPort;
   }
   return false;
 }
+
 function onError(error) {
   if (error.syscall !== "listen") {
     throw error;
@@ -51,6 +72,7 @@ function onError(error) {
       throw error;
   }
 }
+
 function onListening() {
   const addr = server.address();
   const bind = typeof addr === "string"
