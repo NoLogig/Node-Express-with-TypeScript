@@ -9,12 +9,12 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "6.11.1",
-    "npm": "3.10.9"
+    "node": "6.11.0",
+    "npm": "3.10.10"
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build --prod --env=prod --sm=false --aot=true && npm run server:build",
     "server:run": "tsc -p ./server && concurrently \"mongod\" \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" ",
     "server:build": "tsc -p ./server",
