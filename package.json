@@ -1,6 +1,6 @@
 {
   "name": "inspiration-station",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "author": "Max Schweigerdt",
   "repository": {
@@ -9,15 +9,14 @@
   },
   "license": "MIT",
   "engines": {
-    "node": "6.11.0",
-    "npm": "3.10.10"
+    "node": "6.11.1",
+    "npm": "3.10.9"
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -o",
-    "build": "ng build --prod --env=prod --sm=false --aot=true && npm run server:build",
+    "start": "ng serve",
+    "build": "ng build --prod --env=prod --sm=false --aot=true && tsc -p ./server",
     "server:run": "tsc -p ./server && concurrently \"mongod\" \"tsc -w -p ./server\" \"nodemon dist/server/bin/www.js\" ",
-    "server:build": "tsc -p ./server",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -40,18 +39,25 @@
     "zone.js": "^0.8.16",
 
     "express": "^4.15.3",
+    "cookie-parser": "1.4.3",
     "body-parser": "^1.17.2",
     "path": "^0.12.7",
+    "cors": "2.8.4",
+    
     "mongodb": "2.2.30",
-
+    "morgan": "1.8.2",
+    "errorhandler": "1.5.0",
+    "mongojs": "2.4.1",
     "@angular/cli": "1.2.7",
     "@angular/compiler-cli": "^4.3.3",
+
     "@angular/language-service": "^4.3.3",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "@types/body-parser": "~1.16.4",
     "@types/express": "~4.0.36",
+    "@types/morgan": "~1.7.32",
     "@types/mongodb": "~2.2.9"
   },
   "devDependencies": {

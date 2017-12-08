@@ -1,4 +1,4 @@
-import { Request, Response, Router } from "express";
+import { Request, Response, Router, NextFunction } from "express";
 
 const userRouter: Router = Router();
 
@@ -26,9 +26,8 @@ const user = {
   website: "hildegard.org",
 };
 
-userRouter.get("/", (request: Request, response: Response) => {
-
+userRouter.get("/", ( request: Request, response: Response, next: NextFunction ) => {
   response.json(user);
 });
 
-export { userRouter };
+export default userRouter;

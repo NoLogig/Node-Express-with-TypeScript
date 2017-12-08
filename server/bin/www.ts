@@ -1,62 +1,38 @@
 #!/usr/bin/env node
+// Shebang (UNIX) line 
 
-/**
- * Module dependencies.
- */
-
-import * as http from "http";
-import { app } from "../app";
 import { serverPort } from "../config";
-/**
- * Get port from environment and store in Express.
- */
+import { createServer } from "http";
+import mainServer from '../app';
+
+// Get port from environment and store in Express
 const port = normalizePort(process.env.PORT || serverPort);
-app.set("port", port);
+mainServer.app.set("port", port);
 
-/**
- * Create HTTP server.*/
-const server = http.createServer(app);
+// Create HTTP server.
+const server = createServer(mainServer.app);
 
-
-/**
- *  listen on provided ports */
+// listen on provided ports 
 server.listen(port);
-
-/**
- * add error handler */
+// add error handler 
 server.on("error", onError);
-
-/**
- * start listening on port */
+// start listening on port 
 server.on("listening", onListening);
 
-/**
- * Normalize a port into a number, string, or false.
- */
-function normalizePort(val): boolean | number {
+// Normalize a port into a number, string, or false
+function normalizePort(val): number|string|boolean {
 
-  const normalizedPort = parseInt(val, 10);
+  let port = (typeof val === 'string') ? parseInt(val, 10) : val;
 
-  if (isNaN(normalizedPort)) {
-    // named pipe
-    return val;
-  }
-
-  if (normalizedPort >= 0) {
-    // port number
-    return normalizedPort;
-  }
+  if (isNaN(port)) return val;
+  if (port >= 0) return port;
   return false;
 }
+// Handler
+function onError(error:  NodeJS.ErrnoException) {
+  if (error.syscall !== "listen") throw error;
 
-function onError(error) {
-  if (error.syscall !== "listen") {
-    throw error;
-  }
-
-  const bind = typeof port === "string"
-    ? "Pipe " + port
-    : "Port " + port;
+  let bind = typeof port === "string" ? "Pipe: " + port : "Port: " + port;
 
   // handle specific listen errors with friendly messages
   switch (error.code) {
@@ -72,10 +48,13 @@ function onError(error) {
       throw error;
   }
 }
-
 function onListening() {
-  const addr = server.address();
-  const bind = typeof addr === "string"
-    ? "pipe " + addr
-    : "port " + addr.port;
+  let addr = server.address(); 
+  
+  let bind = (typeof addr === 'string') 
+  ? `Pipe: ${addr}` 
+  : `Port: ${addr.port}`;
+ 
+  console.info(`App listening at http://${addr.address}:${addr.port}`);
+  console.log(`App listening on ${bind}`);
 }
